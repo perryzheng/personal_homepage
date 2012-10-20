@@ -1,0 +1,1 @@
+foo = User.create(name:"foo", email:"bar")

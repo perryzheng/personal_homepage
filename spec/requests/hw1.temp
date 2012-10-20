@@ -1,0 +1,35 @@
+(define (expand list)
+  (if (null? list)
+     return '()
+     (let (
+           (rest (expand (cdr list)))
+           (head (car list))
+           )
+           (if (pair? head)
+               (cons (convertFreqToList head) rest)
+               (cons head rest)
+           )
+     )
+  )
+)
+
+
+(define (isBST tree lastPrinted)
+  (display (value tree))
+  (display ":")
+  (display lastPrinted)
+  (display "-----")
+  (if (null? tree) 
+      #t
+      (if (not (isBST (left tree) lastPrinted))
+          #f
+          (if (or (null? (value tree)) (< (value tree) lastPrinted))
+              #f
+              (if (not (isBST (right tree) (value tree)))
+                 #f
+                 #t
+              )
+          )
+      )                     
+  )    
+)
