@@ -145,3 +145,35 @@ footer {
 .sectionBody {
   padding: 10px;
 }
+
+/* about */
+.thumbnail {
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #CCC;
+  border-image: initial;
+  background-color: #F8F8F8;
+  font-size: 18px;
+  padding:10px;
+  width:80%;
+}
+
+.thumbnail img {
+  width: 75px;
+  height: 75px;
+}
+
+.thumbnail span {
+  font-family: sofiapro, Arial, sans-serif;
+  font-weight: bold;
+  display: block;
+}
+
+.filter {
+  float: left;
+  padding-right: 10px;
+  line-height: 28px;
+  font-size:18px;
+}
