@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
   end
 
   def diana
-    time = Time.now
+    time = Time.now.utc.in_time_zone("Pacific Time (US & Canada)")
     if time.wday == 6
       working = TimeRange.new("18:00","21:00").include?(time)    
     elsif time.wday == 2
@@ -29,7 +29,6 @@ class StaticPagesController < ApplicationController
       end
     end
     @isworking = working ? "Yes!" : "No" 
-    @timezone = time.zone
   end
 end
 
