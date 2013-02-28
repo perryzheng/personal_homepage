@@ -29,6 +29,7 @@ class StaticPagesController < ApplicationController
       end
     end
     @isworking = working ? "Yes!" : "No" 
+    @timezone = time.zone
   end
 end
 
